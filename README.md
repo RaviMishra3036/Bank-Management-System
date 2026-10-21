@@ -4,6 +4,28 @@ The **Bank Management System** is a Java Swing desktop application that simulate
 
 This README explains the project in English, including its architecture, user flow, database design, source structure, and the visual assets used by the application.
 
+## Visual Overview
+
+### Application Background
+
+The login screen uses the following banking-themed background image:
+
+![Bank application background](src/Icon/bg.png)
+
+### ATM Operation Background
+
+The transaction screens use the ATM image below as their full-screen background:
+
+![ATM operation background](src/Icon/atm.png)
+
+### Bank Logo
+
+The signup screens display the bank logo:
+
+![Bank logo](src/Icon/logo.png)
+
+> These images are loaded at runtime from the classpath using `ClassLoader.getSystemResource("Icon/...")`.
+
 ## Main Features
 
 - Login with card number and PIN
@@ -200,6 +222,8 @@ flowchart LR
 
 ### 1. Login
 
+![Login background used by the application](src/Icon/bg.png)
+
 1. `Login.java` opens the login window.
 2. The user enters a card number and PIN.
 3. The application queries the `login` table.
@@ -207,6 +231,8 @@ flowchart LR
 5. If they do not match, an incorrect card/PIN message is displayed.
 
 ### 2. ATM Menu and Operations
+
+![ATM screen background used by transaction windows](src/Icon/atm.png)
 
 After successful login, `Main.java` provides buttons for:
 
@@ -219,6 +245,8 @@ After successful login, `Main.java` provides buttons for:
 - **Exit**: Closes the application.
 
 ### 3. New Account Registration
+
+![Bank logo used on signup forms](src/Icon/logo.png)
 
 The registration process is divided into three screens:
 
@@ -284,10 +312,7 @@ The balance is not stored as a separate value. It is calculated at runtime by ad
 1. Import the project into Eclipse as an existing project.
 2. Verify the Java runtime and external JAR paths in `.classpath`.
 3. Start MySQL.
-4. Configure the database connection environment variables before starting Eclipse:
-   - `BANK_DB_URL` (optional; defaults to `jdbc:mysql://localhost:3307/bank`)
-   - `BANK_DB_USER` (optional; defaults to `root`)
-   - `BANK_DB_PASSWORD` (required; set your local MySQL password)
+4. In `src/mypack/database.java`, verify the host, port, database name, username, and password for your local MySQL setup.
 5. Run `src/mypack/Login.java` as a Java application.
 
 ### Command Line
@@ -308,7 +333,7 @@ Replace the placeholder JAR paths with the actual paths on your computer.
 - UI, business logic, and SQL access are currently combined inside screen classes.
 - SQL statements are built by concatenating user input. Production code should use `PreparedStatement` and input validation.
 - PIN values are stored as plain text. Production code should use secure credential handling and hashing where appropriate.
-- Database credentials are read from environment variables and are not stored in the repository.
+- Database credentials are hard-coded in `database.java`. They should be moved to configuration or environment variables before deployment.
 - Connection and result-set resources should be closed properly, preferably with try-with-resources.
 
 ## Additional Architecture Document

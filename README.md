@@ -284,7 +284,10 @@ The balance is not stored as a separate value. It is calculated at runtime by ad
 1. Import the project into Eclipse as an existing project.
 2. Verify the Java runtime and external JAR paths in `.classpath`.
 3. Start MySQL.
-4. In `src/mypack/database.java`, verify the host, port, database name, username, and password for your local MySQL setup.
+4. Configure the database connection environment variables before starting Eclipse:
+   - `BANK_DB_URL` (optional; defaults to `jdbc:mysql://localhost:3307/bank`)
+   - `BANK_DB_USER` (optional; defaults to `root`)
+   - `BANK_DB_PASSWORD` (required; set your local MySQL password)
 5. Run `src/mypack/Login.java` as a Java application.
 
 ### Command Line
@@ -305,7 +308,7 @@ Replace the placeholder JAR paths with the actual paths on your computer.
 - UI, business logic, and SQL access are currently combined inside screen classes.
 - SQL statements are built by concatenating user input. Production code should use `PreparedStatement` and input validation.
 - PIN values are stored as plain text. Production code should use secure credential handling and hashing where appropriate.
-- Database credentials are hard-coded in `database.java`. They should be moved to configuration or environment variables before deployment.
+- Database credentials are read from environment variables and are not stored in the repository.
 - Connection and result-set resources should be closed properly, preferably with try-with-resources.
 
 ## Additional Architecture Document

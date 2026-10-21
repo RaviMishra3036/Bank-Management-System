@@ -4,10 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class database 
+public class database
 {
     public Connection connection = null;
-    public Statement statement = null; 
+    public Statement statement = null;
 
     public database() {
         try {

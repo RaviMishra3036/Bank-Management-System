@@ -1,5 +1,10 @@
 # Bank Management System
 
+**Original author:** Ravi Mishra
+**Copyright:** (c) 2026 Ravi Mishra
+If you copy or modify this project, retain the original-author credit and the
+attribution notice in [NOTICE](NOTICE).
+
 The **Bank Management System** is a Java Swing desktop application that simulates common ATM and banking operations. It provides card/PIN login, customer registration, deposits, withdrawals, fast cash, balance enquiry, mini statements, and PIN change functionality.
 
 This README explains the project in English, including its architecture, user flow, database design, source structure, and the visual assets used by the application.

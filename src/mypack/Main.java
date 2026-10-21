@@ -1,5 +1,10 @@
 package mypack;
 
+/*
+ * Bank Management System
+ * Original author: Ravi Mishra
+ * Copyright (c) 2026 Ravi Mishra
+ */
 
 import java.awt.Color;
 import java.awt.Font;
@@ -19,7 +24,7 @@ public class Main extends JFrame implements ActionListener
 	JButton b1,b2,b3,b4,b5,b6,b7;
 	
 	public Main(String pin) {
-		super("Main Interface");
+		super("Main Interface - Ravi Mishra");
 		
 		this.pin = pin;
 		

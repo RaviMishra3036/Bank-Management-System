@@ -1,3 +1,9 @@
+/*
+ * Bank Management System
+ * Original author: Ravi Mishra
+ * Copyright (c) 2026 Ravi Mishra
+ */
+
 package mypack;
 
 

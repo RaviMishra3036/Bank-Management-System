@@ -1,5 +1,11 @@
 package mypack;
 
+/*
+ * Bank Management System
+ * Original author: Ravi Mishra
+ * Copyright (c) 2026 Ravi Mishra
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -26,7 +32,7 @@ public class Login extends JFrame implements ActionListener
 		
 //		Title 
 		
-		super("Bank Management System");
+		super("Bank Management System - Ravi Mishra");
 	
 //		JLabel
 		

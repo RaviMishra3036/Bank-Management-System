@@ -4,28 +4,6 @@ The **Bank Management System** is a Java Swing desktop application that simulate
 
 This README explains the project in English, including its architecture, user flow, database design, source structure, and the visual assets used by the application.
 
-## Visual Overview
-
-### Application Background
-
-The login screen uses the following banking-themed background image:
-
-![Bank application background](src/Icon/bg.png)
-
-### ATM Operation Background
-
-The transaction screens use the ATM image below as their full-screen background:
-
-![ATM operation background](src/Icon/atm.png)
-
-### Bank Logo
-
-The signup screens display the bank logo:
-
-![Bank logo](src/Icon/logo.png)
-
-> These images are loaded at runtime from the classpath using `ClassLoader.getSystemResource("Icon/...")`.
-
 ## Main Features
 
 - Login with card number and PIN
@@ -222,8 +200,6 @@ flowchart LR
 
 ### 1. Login
 
-![Login background used by the application](src/Icon/bg.png)
-
 1. `Login.java` opens the login window.
 2. The user enters a card number and PIN.
 3. The application queries the `login` table.
@@ -231,8 +207,6 @@ flowchart LR
 5. If they do not match, an incorrect card/PIN message is displayed.
 
 ### 2. ATM Menu and Operations
-
-![ATM screen background used by transaction windows](src/Icon/atm.png)
 
 After successful login, `Main.java` provides buttons for:
 
@@ -245,8 +219,6 @@ After successful login, `Main.java` provides buttons for:
 - **Exit**: Closes the application.
 
 ### 3. New Account Registration
-
-![Bank logo used on signup forms](src/Icon/logo.png)
 
 The registration process is divided into three screens:
 
